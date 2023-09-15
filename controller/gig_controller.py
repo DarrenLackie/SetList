@@ -10,4 +10,10 @@ gigs_blueprint = Blueprint("gigs", __name__)
 @gigs_blueprint.route('/gigs')
 def all_gigs():
     returned_gigs = Gig.query.all()
-    return render_template('/gigs/index.jinja', gigs = returned_gigs)
+    return render_template('/gigs/index.jinja', gigs=returned_gigs)
+
+@gigs_blueprint.route("/gigs/<id>")
+def show_gig(id):
+    gig = Gig.query.get(id)
+    songs = Song.query.join(Setlist).filter(Setlist.gig_id == id)
+    return render_template("gigs/showgig.jinja", gig=gig, songs=songs)

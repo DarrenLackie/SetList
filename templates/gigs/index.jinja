@@ -2,6 +2,24 @@
 
 {% block content %}
 
-<p>skjfgn;jlsafng;aljsfg</p>
+<h1>Gigs</h1>
 
+<table>
+  <tr>
+    <th>Date</th>
+    <th></th>
+    <th>City</th>
+    <th></th>
+    <th>Venue</th>
+  </tr>
+  {% for gig in gigs %}
+  <tr>
+    <td><a href="/gigs/{{ gig.id }}"> {{gig.date}} </a></td>
+    <td>|</td>
+    <td>{{ gig.city }}</td>
+    <td>|</td>
+    <td>{{ gig.venue }}</td>
+  </tr>
+  {% endfor %}
+</table>
 {% endblock %}

@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -25,4 +25,4 @@ app.register_blueprint(setlists_blueprint)
 
 @app.route('/')
 def home():
-    return "done!"
+    return render_template('index.jinja')
