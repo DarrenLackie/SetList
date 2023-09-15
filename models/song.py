@@ -1,7 +1,9 @@
 from app import db
 
 class Song(db.Model):
-    id = db.Column(db.Integer)
+    __tablename__ = "songs"
+
+    id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(255))
     album = db.Column(db.String(255))
     running_time = db.Column(db.Integer)
