@@ -1,0 +1,49 @@
+1. Create a database
+
+2. touch a .flaskenv file and add
+    FLASK_DEBUG=true
+    FLASK_RUN_PORT=4999
+
+   touch a .gitignore file and add
+    __pycache__
+
+3. touch an app.py and add the following
+    from flask import Flask
+    from flask_sqlalchemy import SQLAlchemy
+    from flask_migrate import Migrate
+
+4. Check things work by running "flask run" in terminal
+
+5. Add in SQL alechemy and configure the connection to the database with the following code:
+    
+    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://darrenlackie@localhost:5432/<database name>"
+    db = SQLAlchemy(app)
+    migrate = Migrate(app, db)
+
+   Make sure to change the username for the connection and make sure the database you are using is correct!
+   The syntax for the connection is "dialect://username:password@host:port/database"
+
+6. Add the folder "models" and add any classes you plan on having mapped into a table. 
+   Import the models from below this line in your app.py
+
+    db = SQLAlchemy(app)
+    from models.user import User
+    from models.task import Task
+
+7. Make sure the code works, the following steps are...
+   
+    flask db init (this will make the migrations folder that contains the scripts)
+    flask db migrate (this will add the script(s) to the migrations folder once you have made changes to your code)
+    flask db upgrade (this will run the scripts in the migrations folder that will make changes to the database)
+
+8. Check you see the tables in Postico2
+
+9. Add the controllers folder and touch a file task_controller.py
+
+   Make sure you register the blueprints in the app.py
+
+10. Add some data to our database to check if we can save stuff and display stuff.
+
+11. Add templates for our controller function to use so we can check if our app is able to send and receive data. We do this by creating a "templates" folder and adding the .jinja files we need. 
+
+12.
