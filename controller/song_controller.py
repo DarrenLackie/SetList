@@ -16,5 +16,5 @@ def all_songs():
 def show_song(id):
     selected_song = Song.query.get(id)
     selected_gigs = Gig.query.join(Setlist).filter(Setlist.song_id == id)
-    return render_template("songs/show.jinja", song=selected_song, gigs=selected_gigs)
+    return render_template("songs/show_song.jinja", song=selected_song, gigs=selected_gigs)
     
