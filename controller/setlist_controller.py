@@ -10,4 +10,5 @@ setlists_blueprint = Blueprint("setlists", __name__)
 @setlists_blueprint.route('/setlists')
 def all_setlists():
     setlists_returned = Setlist.query.all()
-    return render_template('/setlists/index.jinja', setlists = setlists_returned)
+    # return render_template('/setlists/index.jinja', setlists = setlists_returned)
+    return "Setlists page"
