@@ -1,0 +1,24 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+
+<h1>Add a Setlist</h1>
+
+<form action="/setlists" method="post">
+  <label for="user">Select a song:</label>
+    <select name="song_id" id="song">
+      {% for song in songs %}
+      <option value="{{ song.id }}">{{ song.title }}</option>
+      {% endfor %}
+    </select>
+  
+  <label for="gig">Select a show:</label>
+    <select name="gig_id" id="gig">
+      {% for gig in gigs %}
+      <option value="{{ gig.id }}">{{ gig.city }}</option>
+      {% endfor %}
+    </select>
+  <input class="btn btn--action" type='submit' value="Submit">
+</form>
+
+{% endblock %}

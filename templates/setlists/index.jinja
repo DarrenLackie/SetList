@@ -2,4 +2,23 @@
 
 {% block content %}
 
+<h1>Setlists</h1>
+
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/setlists/new">New setlist</a>
+</p>
+
+<ul>
+  {% for setlist in setlists %}
+  <li>
+  <p>{{ setlist.gig.city }} - {{ setlist.song.title }} </p>
+    <p>
+      <form action="/setlists/{{ setlist.id }}/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
+  {% endfor %}
+</ul>
+
 {% endblock %}
