@@ -2,17 +2,19 @@
 
 {% block content %}
 
-<form action="/gigs/<id>" method="post">
-  <h1>Add to Setlist</h1>
+<h1>{{ gig.city }} {{ gig.venue }} {{ gig.date }}</h1>
+
+<form action="/gigs/{{ gig.id }}/setlists/new" method="post">
+  <h2>Add Songs to Setlist</h2>
   {% for song in songs %}
   <div class="song-box">
     <label>
-      <input type="checkbox" name="song_id" value="{{ song.id }}">
+      <input type="checkbox" name="song_id[]" value="{{ song.id }}">
       {{ song.title }}
     </label>
   </div>
   {% endfor %}
-  <input class="btn_submit" type="submit" value="Submit">
+  <input class="btn_submit" type="submit" value="Add to Setlist">
 </form>
 
   {% for setlist in gig.setlists %}

@@ -34,4 +34,15 @@ def add_new_gig():
 def delete_gig(id):
     Gig.query.filter_by(id = id).delete()
     db.session.commit()
-    return redirect(f'/gigs')
+    return redirect('/gigs')
+
+@gigs_blueprint.route("/gigs/<id>/setlists/new", methods=['POST'])
+def create_setlist_in_gig(id):
+    song_ids = request.form.getlist('song_id[]')
+    gig_id = id
+    for song_id in song_ids:
+        setlist = SetListItem(song_id=int(song_id), gig_id=gig_id)
+        db.session.add(setlist)
+    
+    db.session.commit()
+    return redirect(f'/gigs/{gig_id}')
