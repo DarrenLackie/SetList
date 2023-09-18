@@ -10,6 +10,7 @@
     <label for="run_time">Run Time</label>
     <input type="number" name="run_time" id="run_time" required>
     <input class="btn_submit" type="submit" value="Add song">
+</form>
 
 <h1>Songs</h1>
 
@@ -30,6 +31,12 @@
     <td>{{ song.running_time }}</td>
     <td>|</td>
     <td><a href="/songs/{{ song.id }}"><input class="btn_submit" type='submit' value="View Song"></a></td>
+    <td>|</td>
+    <td>
+    <form action="/songs/{{ song.id }}/delete" method="POST">
+    <input class="btn delete" type="submit" value="delete" />
+    </td>
+
   </tr>
   {% endfor %}
 </table>

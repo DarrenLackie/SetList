@@ -29,3 +29,9 @@ def add_new_gig():
     db.session.add(gig_to_be_saved)
     db.session.commit()
     return redirect ("/gigs")
+
+# @gigs_blueprint.route("/gigs/<id>/delete", methods=['POST'])
+# def delete_song_from_setlist(id):
+#     Gig.query.filter_by(id = id).delete()
+#     db.session.commit()
+#     return redirect(f'/gigs')

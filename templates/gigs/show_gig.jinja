@@ -2,4 +2,34 @@
 
 {% block content %}
 
+<form action="/gigs/<id>" method="post">
+  <h1>Add to Setlist</h1>
+  {% for song in songs %}
+  <div class="song-box">
+    <label>
+      <input type="checkbox" name="song_id" value="{{ song.id }}">
+      {{ song.title }}
+    </label>
+  </div>
+  {% endfor %}
+  <input class="btn_submit" type="submit" value="Submit">
+</form>
+
+  {% for song in songs %}
+  <div class="song-box">
+      <ul>
+        <li>
+            {{ loop.index }}
+            {{ song.title }} (<i>{{ song.album }}</i>)
+        </li>
+        <li>
+            <form action="/gigs/{{ song.id }}/delete" method="POST">
+            <input class="btn delete" type="submit" value="delete" />
+            </form>
+        </li>
+      </ul>
+  </div>
+  {% endfor %}
+</form>
+
 {% endblock %}

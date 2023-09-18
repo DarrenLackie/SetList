@@ -29,9 +29,3 @@ def create_setlist():
     
     db.session.commit()
     return redirect('/setlists')
-
-@setlists_blueprint.route("/setlists/<id>/delete", methods=['POST'])
-def delete_setlist(id):
-    Setlist.query.filter_by(id = id).delete()
-    db.session.commit()
-    return redirect('/setlists')

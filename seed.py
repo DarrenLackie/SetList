@@ -17,7 +17,6 @@ def seed():
     song3 = Song(title="Repeating Patterns", album="The More I Sleep, The Less I Dream", running_time=4)
     gig1 = Gig(city="Edinburgh", venue="The Liquid Room", date="10-06-2023", set_time=75)
     gig2 = Gig(city="London", venue="Scala", date="12-06-2023", set_time=90)
-    setlist1 = Setlist(gig_id=1, song_id=1)
 
 
     db.session.add(song1)
@@ -27,5 +26,4 @@ def seed():
     db.session.add(gig1)
     db.session.add(gig2)
 
-    db.session.add(setlist1)
     db.session.commit()

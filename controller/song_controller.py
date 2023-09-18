@@ -28,3 +28,9 @@ def add_new_song():
     db.session.add(song_to_add)
     db.session.commit()
     return redirect('/songs')
+
+# @songs_blueprint.route("/songs/<id>/delete", methods=['POST'])
+# def delete_song_from_setlist(id):
+#     Song.query.filter_by(id = id).delete()
+#     db.session.commit()
+#     return redirect(f'/songs')
