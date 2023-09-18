@@ -1,6 +1,6 @@
 from app import db
 
-class Setlist(db.Model):
+class SetListItem(db.Model):
     __tablename__ = "setlists"
 
     id = db.Column(db.Integer, primary_key = True) 

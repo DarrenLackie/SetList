@@ -1,7 +1,7 @@
 from app import db
 from models.gig import Gig
 from models.song import Song
-from models.setlist import Setlist
+from models.setlistitem import SetListItem
 import click
 
 from flask.cli import with_appcontext

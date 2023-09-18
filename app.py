@@ -8,7 +8,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://darrenlackie@localhost:543
 db = SQLAlchemy(app)
 from models.gig import Gig
 from models.song import Song
-from models.setlist import Setlist
+from models.setlistitem import SetListItem
 
 migrate = Migrate(app, db)
 

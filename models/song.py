@@ -7,7 +7,7 @@ class Song(db.Model):
     title = db.Column(db.String(255))
     album = db.Column(db.String(255))
     running_time = db.Column(db.Integer)
-    setlists = db.relationship("Setlist", backref="song")
+    setlists = db.relationship("SetListItem", backref="song")
 
     def __repr__(self):
         return f"<Song {self.id}: Title {self.title}: Album {self.album}: Song Length {self.running_time}>"

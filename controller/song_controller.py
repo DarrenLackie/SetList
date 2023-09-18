@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.song import Song
-from models.setlist import Setlist
+from models.setlistitem import SetListItem
 from models.gig import Gig
 from app import db
 
@@ -15,7 +15,7 @@ def all_songs():
 @songs_blueprint.route("/songs/<id>")
 def show_song(id):
     selected_song = Song.query.get(id)
-    selected_gigs = Gig.query.join(Setlist).filter(Setlist.song_id == id)
+    selected_gigs = Gig.query.join(SetListItem).filter(SetListItem.song_id == id)
     return render_template("songs/show_song.jinja", song=selected_song, gigs=selected_gigs)
 
 @songs_blueprint.route('/songs', methods=["POST"])

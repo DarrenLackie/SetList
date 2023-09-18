@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.gig import Gig
-from models.setlist import Setlist
+from models.setlistitem import SetListItem
 from models.song import Song
 from app import db
 
