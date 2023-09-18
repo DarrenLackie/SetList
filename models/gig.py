@@ -8,7 +8,7 @@ class Gig(db.Model):
     venue = db.Column(db.String(64))
     date = db.Column(db.String(10))
     set_time = db.Column(db.Integer)
-    song_id = db.relationship("Setlist", backref="gig")
+    setlists = db.relationship("Setlist", backref="gig")
 
     def __repr__(self):
         return f"<Gig {self.id}: City {self.city}: Venue {self.venue}: Date {self.date}: Set Time {self.set_time}"

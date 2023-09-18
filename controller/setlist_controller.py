@@ -29,3 +29,11 @@ def create_setlist():
     
     db.session.commit()
     return redirect('/setlists')
+
+@setlists_blueprint.route("/setlists/<id>/delete", methods=['POST'])
+def delete_song_from_setlist(id):
+    set_list_item = Setlist.query.get(id)
+    gig_id = set_list_item.gig.id
+    Setlist.query.filter_by(id = id).delete()
+    db.session.commit()
+    return redirect(f'/gigs/{gig_id}')

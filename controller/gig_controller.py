@@ -15,8 +15,8 @@ def all_gigs():
 @gigs_blueprint.route("/gigs/<id>")
 def show_gig(id):
     selected_gig = Gig.query.get(id)
-    selected_songs = Song.query.join(Setlist).filter(Setlist.gig_id == id)
-    return render_template("gigs/show_gig.jinja", gig=selected_gig, songs=selected_songs)
+    songs = Song.query.all()
+    return render_template("gigs/show_gig.jinja", gig=selected_gig, songs=songs)
 
 @gigs_blueprint.route("/gigs", methods=["POST"])
 def add_new_gig():
