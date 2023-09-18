@@ -1,25 +1,31 @@
 <html>
 <head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='buttons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='tables.css') }}">
     <title>SetList</title>
 </head>
 <body>
-<main class="flex flex--row">
+<main>
   <nav>
-    <ul>
-        <li>
-            <a href="/">My Bands</a>
-        </li>
-        <li>
-            <a href="/gigs">Gigs</a>
-        </li>
-        <li>
-            <a href="/songs">Songs</a>
-        </li>
-        <li>
-            <a href="/setlists">Setlists</a>
-        </li>
-    </ul>
+    <details class="dropdown">
+        <summary role="button">
+          <a class="button">Menu</a>
+        </summary>
+        <ul>
+            <li>
+                <a href="/">My Bands</a>
+            </li>
+            <li>
+                <a href="/gigs">Gigs</a>
+            </li>
+            <li>
+                <a href="/songs">Songs</a>
+            </li>
+        </ul>
+    </details>
   </nav>
   <section id="content">
       {% block content %}

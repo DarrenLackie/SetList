@@ -1,0 +1,114 @@
+.btn_delete {
+    background-color: #C33C54;
+  }
+  
+  .btn_delete:hover {
+    background-color: #730000;
+}
+
+.btn_submit:hover {
+    background-color: #ABC798;
+}
+  
+.btn_submit {
+    background-color: #ABC798;
+}
+
+
+/* Menu button */
+:root {
+    --button-background: dodgerblue;
+    --button-color: white;
+    
+    --dropdown-highlight: dodgerblue;
+    --dropdown-width: 160px;
+    --dropdown-background: white;
+    --dropdown-color: black;
+  }
+
+a.button {
+    /* Frame */
+    display: inline-block;
+    padding: 20px 28px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    
+    /* Style */
+    border: none;
+    background: var(--button-background);
+    color: var(--button-color);
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+.dropdown summary {
+    list-style: none;
+    list-style-type: none;
+  }
+
+  .dropdown > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .dropdown summary:focus {
+    outline: none;
+  }
+  
+  .dropdown summary:focus a.button {
+    border: 2px solid white;
+  }
+  
+  .dropdown ul {
+    position:relative;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: var(--dropdown-width);
+    box-sizing: border-box;
+    z-index: 2;
+    
+    background: var(--dropdown-background);
+    border-radius: 6px;
+    list-style: none;
+  }
+  
+  .dropdown ul li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown ul li a:link, .dropdown ul li a:visited {
+    display: inline-block;
+    padding: 10px 0.8rem;
+    width: 100%;
+    box-sizing: border-box;
+    
+    color: var(--dropdown-color);
+    text-decoration: none;
+  }
+  
+  .dropdown ul li a:hover {
+    background-color: var(--dropdown-highlight);
+    color: var(--dropdown-background);
+  }
+  
+  /* Dropdown triangle */
+  .dropdown ul::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent var(--dropdown-background) transparent;
+  }
+  
+  
+  /* Close the dropdown with outside clicks */
+  .dropdown > summary::before {
+    display: none;
+  }

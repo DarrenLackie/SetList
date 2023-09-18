@@ -2,10 +2,11 @@
 
 {% block content %}
 
-<h1>{{ gig.city }} {{ gig.venue }} {{ gig.date }}</h1>
+<h1>{{ gig.city }}, {{ gig.venue }}, {{ gig.date }}</h1>
 <hr>
 <form action="/gigs/{{ gig.id }}/setlists/new" method="post">
   <h2>Add Songs to Setlist</h2>
+  <br>
   {% for song in songs %}
   <div class="song-box">
     <label>
@@ -15,7 +16,7 @@
   </div>
   <br>
   {% endfor %}
-  <input class="btn_submit" type="submit" value="Add to Setlist">
+  <input class="btn_submit" type="submit" value="+">
 </form>
 <hr>
   {% for setlist in gig.setlists %}
@@ -23,7 +24,7 @@
       <ul>
         <li>
             {{ loop.index }}
-            {{ setlist.song.title }} (<i>{{ setlist.song.album }}</i>)
+            {{ setlist.song.title }} ( <small><i>{{ setlist.song.album }}</i></small> )
         </li>
         <li>
             <form action="/setlists/{{ setlist.id }}/delete" method="POST">
