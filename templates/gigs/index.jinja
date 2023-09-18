@@ -37,6 +37,11 @@
     <td>{{ gig.set_time }}</td>
     <td>|</td>
     <td><a href="/gigs/{{ gig.id }}"><input class="btn_submit" type='submit' value="View Setlist"></a></td>
+    <td>|</td>
+    <td><form action="/gigs/{{ gig.id }}/delete" method="POST">
+    <input class="btn delete" type="submit" value="Delete"/>
+    </form>
+    </td>
   </tr>
   {% endfor %}
 </table>
