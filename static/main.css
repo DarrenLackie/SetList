@@ -14,3 +14,8 @@
     border: solid 2px black;
     /* text-align: center; */
   }
+
+  body {
+    background-color:rgba(0, 139, 139, 0.276);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}

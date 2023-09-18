@@ -2,6 +2,18 @@
 
 {% block content %}
 
+<form class="form-inline" action="/gigs" method="post">
+    <label for="date">Date</label>
+    <input type="date" name="date" id="date" required>
+    <label for="city">City</label>
+    <input type="text" name="city" id="city" required>
+    <label for="venue">Venue</label>
+    <input type="text" name="venue" id="venue" required>
+    <label for="set_time">Set Time</label>
+    <input type="number" name="set_time" id="set_time" required>
+    <input class="btn_submit" type="submit" value="Add gig">
+</form>
+
 <h1>Gigs</h1>
 
 <table>
@@ -11,14 +23,20 @@
     <th>City</th>
     <th></th>
     <th>Venue</th>
+    <th></th>
+    <th>Set Time</th>
   </tr>
   {% for gig in gigs %}
   <tr>
-    <td><a href="/gigs/{{ gig.id }}"> {{gig.date}} </a></td>
+    <td>{{gig.date}} </a></td>
     <td>|</td>
     <td>{{ gig.city }}</td>
     <td>|</td>
     <td>{{ gig.venue }}</td>
+    <td>|</td>
+    <td>{{ gig.set_time }}</td>
+    <td>|</td>
+    <td><a href="/gigs/{{ gig.id }}"><input class="btn_submit" type='submit' value="View Setlist"></a></td>
   </tr>
   {% endfor %}
 </table>

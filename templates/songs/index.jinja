@@ -2,27 +2,36 @@
 
 {% block content %}
 
-<h1>Add a Visit</h1>
+<form class="form-inline" action="/songs" method="post">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" required>
+    <label for="album">Album</label>
+    <input type="text" name="album" id="album" required>
+    <label for="run_time">Run Time</label>
+    <input type="number" name="run_time" id="run_time" required>
+    <input class="btn_submit" type="submit" value="Add song">
 
-<form action="/visits" method="post">
-  <label for="user">Select a user:</label>
-    <select name="user_id" id="user">
-      {% for user in users %}
-      <option value="{{ user.id }}">{{ user.name }}</option>
-      {% endfor %}
-    </select>
-  
-  <label for="location">Select a location:</label>
-    <select name="location_id" id="location">
-      {% for location in locations %}
-      <option value="{{ location.id }}">{{ location.name }}</option>
-      {% endfor %}
-    </select>
-  
+<h1>Songs</h1>
 
-  <label for="review">Add a Review</label>
-  <textarea name="review" id="review" cols="30" rows="10"></textarea>
-  <input class="btn btn--action" type='submit' value="Visit">
-</form>
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th>Album</th>
+    <th></th>
+    <th>Run Time</th>
+  </tr>
+  {% for song in songs %}
+  <tr>
+    <td>{{ song.title }} </a></td>
+    <td>|</td>
+    <td>{{ song.album }}</td>
+    <td>|</td>
+    <td>{{ song.running_time }}</td>
+    <td>|</td>
+    <td><a href="/songs/{{ song.id }}"><input class="btn_submit" type='submit' value="View Song"></a></td>
+  </tr>
+  {% endfor %}
+</table>
 
 {% endblock %}

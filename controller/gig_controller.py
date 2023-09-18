@@ -17,3 +17,15 @@ def show_gig(id):
     selected_gig = Gig.query.get(id)
     selected_songs = Song.query.join(Setlist).filter(Setlist.gig_id == id)
     return render_template("gigs/show_gig.jinja", gig=selected_gig, songs=selected_songs)
+
+@gigs_blueprint.route("/gigs", methods=["POST"])
+def add_new_gig():
+    gig_date = request.form["date"]
+    gig_city = request.form["city"]
+    gig_venue = request.form["venue"]
+    gig_set_time = request.form["set_time"]
+
+    gig_to_be_saved = Gig(date=gig_date, city=gig_city, venue=gig_venue, set_time=gig_set_time)
+    db.session.add(gig_to_be_saved)
+    db.session.commit()
+    return redirect ("/gigs")
