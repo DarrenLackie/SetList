@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1>{{ gig.city }} {{ gig.venue }} {{ gig.date }}</h1>
-
+<hr>
 <form action="/gigs/{{ gig.id }}/setlists/new" method="post">
   <h2>Add Songs to Setlist</h2>
   {% for song in songs %}
@@ -13,10 +13,11 @@
       {{ song.title }}
     </label>
   </div>
+  <br>
   {% endfor %}
   <input class="btn_submit" type="submit" value="Add to Setlist">
 </form>
-
+<hr>
   {% for setlist in gig.setlists %}
   <div class="song-box">
       <ul>
