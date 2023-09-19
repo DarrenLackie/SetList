@@ -15,9 +15,9 @@ migrate = Migrate(app, db)
 from seed import seed
 app.cli.add_command(seed)
 
-from controller.gig_controller import gigs_blueprint
-from controller.song_controller import songs_blueprint
-from controller.setlist_controller import setlists_blueprint
+from controllers.gig_controller import gigs_blueprint
+from controllers.song_controller import songs_blueprint
+from controllers.setlist_controller import setlists_blueprint
 
 app.register_blueprint(gigs_blueprint)
 app.register_blueprint(songs_blueprint)
