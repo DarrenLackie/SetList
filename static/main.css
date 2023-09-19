@@ -3,7 +3,7 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
-    background-color: #ff847c ;
+    background-color: #ff857cfb ;
 }
 
 .band-container {
@@ -24,12 +24,12 @@ header {
   }
 
 body {
-    background-color:white;
+    background-color:whitesmoke;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 footer {
-    background-color: #ff847c;
+    background-color: #ff857cfb;
     width:100%
 }
 

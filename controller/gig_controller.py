@@ -46,3 +46,27 @@ def create_setlist_in_gig(id):
     
     db.session.commit()
     return redirect(f'/gigs/{gig_id}')
+
+@gigs_blueprint.route("/gigs/<id>/update")
+def show_update_gig_page(id):
+    gig_to_update = Gig.query.get(id)
+    return render_template("gigs/update.jinja", gig=gig_to_update)
+
+
+@gigs_blueprint.route("/gigs/<id>/update", methods=["POST"])
+def update_gig(id):
+    gig_to_update = Gig.query.get(id)
+
+    new_gig_city = request.form["city"]
+    new_gig_venue = request.form["venue"]
+    new_gig_date = request.form["date"]
+    new_gig_set_time = request.form["set_time"]
+
+    gig_to_update.city = new_gig_city
+    gig_to_update.venue = new_gig_venue
+    gig_to_update.date = new_gig_date
+    gig_to_update.set_time = new_gig_set_time
+
+    db.session.commit()
+
+    return redirect(f'/gigs/{gig_to_update.id}')

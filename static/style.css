@@ -32,8 +32,9 @@ body {
     text-decoration: none;
   }
   
-  a:hover, a:active, a:focus {
-    color: #e07950;
+  a:hover {
+    color: whitesmoke;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important;
   }
   
   nav {

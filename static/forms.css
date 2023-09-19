@@ -6,7 +6,7 @@
     margin-right: 20px;
     margin-left: 20px;
     border: 1px solid black;
-  }
+  } */
 
 .form-inline label {
     margin: 5px 10px 5px 10px;
@@ -32,13 +32,13 @@
     border: 1px solid black;
     color: white;
     margin-top: 5px;
-} */
+}
 
-.form-inline {
-    /* overflow: hidden; */
+/* .form-inline {
+    overflow: hidden;
     grid-area: form
   }
-  /* label {
+    label {
     float:right;
     clear:both;
     margin:10px

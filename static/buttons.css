@@ -30,15 +30,15 @@ a.button {
     /* Frame */
     display: inline-block;
     padding: 20px 28px;
-    border-radius: 50px;
-    box-sizing: border-box;
-    margin-bottom: 30px;
+    /* border-radius: 50px; */
+    /* box-sizing: border-box; */
+    /* margin-bottom: 30px; */
     
     /* Style */
-    border: none;
-    background: var(--button-background);
-    color: var(--button-color);
-    font-size: 24px;
+    /* border: 2px white; */
+    /* background: var(--button-background); */
+    /* color: var(--button-color); */
+    font-size: 18px;
     grid-area: menu;
   } 
 
@@ -51,15 +51,7 @@ a.button {
     display: none;
   }
   
-  .dropdown summary:focus {
-    outline: none;
-  }
-  
-  .dropdown summary:focus a.button {
-    border: 2px solid white;
-  }
-  
-  .dropdown ul {
+  .dropdown > ul {
     position:relative;
     margin: 20px 0 0 0;
     padding: 20px;
@@ -73,19 +65,17 @@ a.button {
     list-style: none;
   }
   
-  .dropdown ul li {
+  .dropdown > ul > li {
     padding: 0;
     margin: 0;
   }
   
-  .dropdown ul li a:link, .dropdown ul li a:visited {
+  .dropdown > ul > li > a:link, .dropdown > ul > li > a:visited {
     display: inline-block;
-    padding: 10px 0.8rem;
+    padding: 10px;
     width: 100%;
-    box-sizing: border-box;
-    
-    color: var(--dropdown-color);
-    text-decoration: none;
+    box-sizing: border-box;    
+    color: black
   }
   
   .dropdown ul li a:hover {
@@ -112,5 +102,7 @@ a.button {
   .dropdown > summary::before {
     display: none;
   }
+
+  /* * {cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important;}  */
 
   

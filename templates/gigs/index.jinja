@@ -38,6 +38,9 @@
     <td>|</td>
     <td><a href="/gigs/{{ gig.id }}"><input class="btn_submit" type='submit' value="View Setlist"></a></td>
     <td>|</td>
+    <td><form action="/gigs/{{ gig.id }}/update" method="get">
+    <input class="btn_submit" type="submit" value="Update"/>
+    <td>|</td>   
     <td><form action="/gigs/{{ gig.id }}/delete" method="POST">
     <input class="btn_delete" type="submit" value="Delete"/>
     </form>

@@ -1,0 +1,17 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+
+<form class="form-inline" action="/gigs/{{ gig.id }}/update" method="post">
+    <label for="date">Date</label>
+    <input type="date" name="date" id="date" value="{{ gig.date }}" required>
+    <label for="city">City</label>
+    <input type="text" name="city" id="city" value="{{ gig.city }}" required>
+    <label for="venue">Venue</label>
+    <input type="text" name="venue" id="venue" value="{{ gig.venue }}" required>
+    <label for="set_time">Set Time</label>
+    <input type="number" name="set_time" id="set_time" value="{{ gig.set_time }}" required>
+    <input class="btn_submit" type="submit" value="Update gig">
+</form>
+
+{% endblock %}
