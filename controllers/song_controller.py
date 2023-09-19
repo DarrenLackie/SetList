@@ -34,3 +34,25 @@ def delete_song(id):
     Song.query.filter_by(id = id).delete()
     db.session.commit()
     return redirect(f'/songs')
+
+@songs_blueprint.route("/songs/<id>/update")
+def show_update_song_page(id):
+    song_to_update = Song.query.get(id)
+    return render_template("songs/update.jinja", song=song_to_update)
+
+@songs_blueprint.route("/songs/<id>/update", methods=["POST"])
+def update_song(id):
+    song_to_update = Song.query.get(id)
+
+    new_song_title = request.form["title"]
+    new_song_album = request.form["album"]
+    new_song_running_time = request.form["running_time"]
+
+    song_to_update.title = new_song_title
+    song_to_update.album = new_song_album
+    song_to_update.running_time = new_song_running_time
+
+    db.session.commit()
+
+    return redirect(f'/songs/{song_to_update.id}')
+

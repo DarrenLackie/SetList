@@ -70,3 +70,5 @@ def update_gig(id):
     db.session.commit()
 
     return redirect(f'/gigs/{gig_to_update.id}')
+
+

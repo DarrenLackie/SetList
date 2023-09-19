@@ -19,21 +19,21 @@
   <input class="btn_submit" type="submit" value="+">
 </form>
 <hr>
+<p>Set Time: {{ gig.set_time }}</p>
   {% for setlist in gig.setlists %}
   <div class="song-box">
-      <ul>
-        <li>
-            {{ loop.index }}
-            {{ setlist.song.title }} ( <small><i>{{ setlist.song.album }}</i></small> )
-        </li>
-        <li>
-            <form action="/setlists/{{ setlist.id }}/delete" method="POST">
-            <input class="btn delete" type="submit" value="delete" />
-            </form>
-        </li>
-      </ul>
+    <ul>
+      <li>
+        {# {{ loop.index }} #}
+        {{ setlist.song.title }} ( <small><i>{{ setlist.song.album }}</i></small> ) [{{ setlist.song.running_time }}mins]
+      </li>
+      <li>
+        <form action="/setlists/{{ setlist.id }}/delete" method="POST">
+        <input class="btn delete" type="submit" value="delete" />
+        </form>
+      </li>
+    </ul>
   </div>
   {% endfor %}
-</form>
 
 {% endblock %}
