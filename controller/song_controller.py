@@ -25,12 +25,9 @@ def add_new_song():
     song_run_time = request.form["run_time"]
 
     song_to_add = Song(title=song_name, album=song_album, running_time=song_run_time)
-    if song_to_add:
-        return "Song already in set"
-    else:
-        db.session.add(song_to_add)
-        db.session.commit()
-        return redirect('/songs')
+    db.session.add(song_to_add)
+    db.session.commit()
+    return redirect('/songs')
 
 @songs_blueprint.route("/songs/<id>/delete", methods=['POST'])
 def delete_song(id):
