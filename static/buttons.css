@@ -39,8 +39,8 @@ a.button {
     background: var(--button-background);
     color: var(--button-color);
     font-size: 24px;
-    cursor: pointer;
-  }
+    grid-area: menu;
+  } 
 
 .dropdown summary {
     list-style: none;
@@ -112,3 +112,5 @@ a.button {
   .dropdown > summary::before {
     display: none;
   }
+
+  

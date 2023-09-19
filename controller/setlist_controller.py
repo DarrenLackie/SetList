@@ -19,7 +19,7 @@ def new_setlist():
     return render_template("setlists/new.jinja", songs=songs, gigs=gigs)
 
 @setlists_blueprint.route("/setlists",  methods=['POST'])
-def create_setlist():
+def add_to_setlist():
     song_ids = request.form.getlist('song_id')
     # print(f"song_ids are {song_ids}")
     gig_id = request.form.get('gig_id')

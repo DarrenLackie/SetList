@@ -8,7 +8,9 @@
     <title>SetList</title>
 </head>
 <body>
-<main>
+<div id="grid-container">
+<header>
+  <div id="menu">
   <nav>
     <details class="dropdown">
         <summary role="button">
@@ -27,11 +29,18 @@
         </ul>
     </details>
   </nav>
+  </div>
+</header>
+<main>
   <section id="content">
       {% block content %}
 
       {% endblock%}
   </section>
   </main>
+<footer>
+    <p>&copy; 2020 SetList</p>
+</footer>
+</div>
 </body>
 </html>

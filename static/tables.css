@@ -13,4 +13,5 @@ th {
   
 table {
     border-collapse: collapse;
+    grid-area: table
 }

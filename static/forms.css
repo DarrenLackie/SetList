@@ -1,0 +1,51 @@
+/* .form-inline {
+    display: flex;
+    flex-flow:column;
+    align-items: left;
+    background-color: rgba(128, 128, 128, 0.442);
+    margin-right: 20px;
+    margin-left: 20px;
+    border: 1px solid black;
+  }
+
+.form-inline label {
+    margin: 5px 10px 5px 10px;
+    padding: 10px;
+    padding: 5px;
+  }
+
+.form-inline input[type="submit"] {
+    padding: 5px 10px 5px;
+    background-color: #1445b8bd;
+    border: 1px solid black;
+    color: white;
+    margin-left:10px;
+  }
+
+.form-inline input[type="text"] {
+    width: 25%
+}
+
+.form [type="submit"] {
+    padding: 5px 10px;
+    background-color: #7b55b3;
+    border: 1px solid black;
+    color: white;
+    margin-top: 5px;
+} */
+
+.form-inline {
+    /* overflow: hidden; */
+    grid-area: form
+  }
+  /* label {
+    float:right;
+    clear:both;
+    margin:10px
+  }
+  input {
+    float: right;
+    clear: both;
+    margin:10px;
+  }  */
+

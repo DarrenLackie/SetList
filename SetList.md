@@ -5,7 +5,7 @@ A band wants to be able to manage their setlist by adding a number of songs to t
 
 ## MVP
 
-The band should be able to create a `Gig` with a name, date, venue, set-time and a `Song`. A song will have a title, the album that it's from and a running time. A band will be able to add numerous songs to each individual `Gig` and view them as a list (their set-list for that `Gig`). The band will be able to see which songs they will play in each `Gig` and click through onto one to edit or delete it. 
+The band should be able to create a `Gig` with a name, date, venue, set-time and a `Song`. A song will have a title, the album that it's from and a running time. A band will be able to add numerous songs to each individual `Gig` and view them as a list (their set-list for that `Gig`). The band will be able to see which songs they will play in each `Gig` and click onto each song for more information. 
 
 ## EXTENSIONS
 

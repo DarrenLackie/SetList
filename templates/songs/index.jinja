@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<div id="form">
 <form class="form-inline" action="/songs" method="post">
     <label for="title">Title</label>
     <input type="text" name="title" id="title" required>
@@ -11,7 +12,9 @@
     <input type="number" name="run_time" id="run_time" required>
     <input class="btn_submit" type="submit" value="Add song">
 </form>
+</div>
 
+<div id="table">
 <h1>Songs</h1>
 {# <details>
 <summary>These Four Walls</summary> #}
@@ -31,16 +34,19 @@
     <td>|</td>
     <td>{{ song.running_time }}</td>
     <td>|</td>
-    <td><a href="/songs/{{ song.id }}"><input class="btn_submit" type='submit' value="View Song"></a></td>
+    <td><a href="/songs/{{ song.id }}" method="GET"><input class="btn_submit" type='submit' value="View Song"></a></td>
     <td>|</td>
     <td>
     <form action="/songs/{{ song.id }}/delete" method="POST">
     <input class="btn delete" type="submit" value="delete" />
     </td>
+    </tr>
+    </form>
 
   </tr>
   {% endfor %}
 </table>
 </details>
+</div>
 
 {% endblock %}
