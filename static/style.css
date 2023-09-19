@@ -1,15 +1,4 @@
-details > summary {
-    padding:25px;
-}
-
-
-body {
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 0px;
-    margin: 0px;
-  }
-  
+ 
   h1, h2, h3, h4, h5, h6 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0px;
@@ -37,27 +26,8 @@ body {
     cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important;
   }
   
-  nav {
-    padding: 0px;
-    margin: 0px;
-    padding-right: 25px;
-  }
   
-  nav ul li {
-    margin-bottom: 15px;
-    text-transform: uppercase;
-  }
-
-  
-  main {
-    padding: 25px;
-  }
-  
-  .flex {
-    display: flex;
-  }
-  
-  #content {
-    /* border-left: 1px solid #254E70; */
+  /* #content {
+    border-left: 1px solid #254E70;
     padding-left: 25px;
-  }
+  } */

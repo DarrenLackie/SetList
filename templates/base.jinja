@@ -1,46 +1,39 @@
 <html>
-<head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='buttons.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='tables.css') }}">
-    <title>SetList</title>
-</head>
-<body>
-<div id="grid-container">
-<header>
-  <div id="menu">
-  <nav>
-    <details class="dropdown">
-        <summary role="button">
-          <a class="button">Menu</a>
-        </summary>
-        <ul>
-            <li>
+  <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='buttons.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='tables.css') }}">
+      <title>SetList</title>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <a href="/"><img src="static/images/logo.png" alt="Logo"></a>
+          <ul class="nav-links-list">
+              <li>
                 <a href="/">My Bands</a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a href="/gigs">Gigs</a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a href="/songs">Songs</a>
-            </li>
-        </ul>
-    </details>
-  </nav>
-  </div>
-</header>
-<main>
-  <section id="content">
-      {% block content %}
+              </li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+      <section id="content">
+        {% block content %}
 
-      {% endblock%}
-  </section>
-  </main>
-<footer>
-    <p>&copy; 2020 SetList</p>
-</footer>
-</div>
+        {% endblock%}
+      </section>
+    </main>
+        <footer>
+          <p>&copy; 2020 SetList</p>
+        </footer>
+    </div>
 </body>
 </html>

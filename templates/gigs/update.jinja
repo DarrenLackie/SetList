@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<h1>{{ gig.date }} ||| {{ gig.city }} ||| {{ gig.venue }}</h1>
+
 <form class="form-inline" action="/gigs/{{ gig.id }}/update" method="post">
     <label for="date">Date</label>
     <input type="date" name="date" id="date" value="{{ gig.date }}" required>

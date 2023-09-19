@@ -1,15 +1,54 @@
+header img {
+  height:130px;
+}
+
 header {
-    background: url('/static/images/logo.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-    background-color: #ff857cfb ;
+    background-color: #ff857cd0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 130px;
+    display: inline;
+    align-items: center;
+
+}
+
+nav {
+  display:flex;
+  justify-content: space-between;
+}
+
+.nav-links-list {
+  display: flex;
+  margin:20px;
+}
+
+header li {
+  font-size: 28px;
+  margin:20px;
+}
+
+body {
+    height: 125vh;
+    background-color:whitesmoke;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 180px;
+    /* padding:50px */
+}
+
+footer {
+    background-color: #ff857cfb;
+    width:100%;
+    position: absolute;
+    bottom: 0
 }
 
 .band-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between
+    justify-content:space-between;
   }
 
 .band {
@@ -22,16 +61,6 @@ header {
     border: solid 2px black;
     text-align: center;
   }
-
-body {
-    background-color:whitesmoke;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-}
-
-footer {
-    background-color: #ff857cfb;
-    width:100%
-}
 
   /* #grid-container {
     display: grid;
