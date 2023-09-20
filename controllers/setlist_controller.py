@@ -21,7 +21,6 @@ def new_setlist():
 @setlists_blueprint.route("/setlists",  methods=['POST'])
 def add_to_setlist():
     song_ids = request.form.getlist('song_id')
-    # print(f"song_ids are {song_ids}")
     gig_id = request.form.get('gig_id')
     for song_id in song_ids:
         setlist = SetListItem(song_id=int(song_id), gig_id=gig_id)
@@ -37,3 +36,5 @@ def delete_song_from_setlist(id):
     SetListItem.query.filter_by(id = id).delete()
     db.session.commit()
     return redirect(f'/gigs/{gig_id}')
+
+
