@@ -7,33 +7,40 @@
 <form action="/gigs/{{ gig.id }}/setlists/new" method="post">
   <h2>Add Songs to Setlist</h2>
   <br>
-  {% for song in songs %}
-  <div class="song-box">
-    <label>
-      <input type="checkbox" name="song_id[]" value="{{ song.id }}">
-      {{ song.title }}
-    </label>
-  </div>
-  <br>
+  {% for album, songs_in_album in songs|groupby('album') %}
+    <details>
+      <summary>{{ album }}</summary>
+      {% for song in songs_in_album %}
+        <div class="album-dropdown">
+          <label>
+            <input type="checkbox" name="song_id[]" value="{{ song.id }}">
+            {{ song.title }}
+          </label>
+        </div>
+      {% endfor %}
+    </details>
   {% endfor %}
   <input class="btn_submit" type="submit" value="+">
 </form>
 <hr>
 <p>Set Time: {{ gig.set_time }}</p>
-  {% for setlist in gig.setlists %}
+
+{% set total_song_times = 0 %}
+{% for setlist in gig.setlists %}
+  {% set total_song_times = total_song_times + setlist.song.running_time  %}
   <div class="song-box">
     <ul>
       <li>
-        {# {{ loop.index }} #}
         {{ setlist.song.title }} ( <small><i>{{ setlist.song.album }}</i></small> ) [{{ setlist.song.running_time }}mins]
       </li>
       <li>
         <form action="/setlists/{{ setlist.id }}/delete" method="POST">
-        <input class="btn delete" type="submit" value="delete" />
+          <input class="btn delete" type="submit" value="delete" />
         </form>
       </li>
+      <li>Remaining Time: {{ gig.set_time - total_song_times }} mins</li>
     </ul>
   </div>
-  {% endfor %}
+{% endfor %}
 
 {% endblock %}

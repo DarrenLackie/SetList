@@ -79,6 +79,10 @@ body {
     text-align: center;
   }
 
+  .album-dropdown {
+    padding:12px
+  }
+
   /* #grid-container {
     display: grid;
     grid-template-areas:
