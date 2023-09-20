@@ -2,7 +2,6 @@
 
 {% block content %}
 
-<div id="form">
 <form class="form-inline" action="/songs" method="post">
     <label for="title">Title</label>
     <input type="text" name="title" id="title" required>
@@ -12,16 +11,14 @@
     <input type="number" name="run_time" id="run_time" required>
     <input class="btn_submit" type="submit" value="Add song">
 </form>
-</div>
 
-<div id="table">
-<h1>Songs</h1>
+<h1><u>Songs</u></h1>
 {# <details>
 <summary>These Four Walls</summary> #}
 {% for album, songs_in_album in songs|groupby('album') %}
-  <details>
+  <details id="album-names">
     <summary>{{ album }}</summary>
-    <table>
+    <table id="songs-table">
       <thead>
         <tr>
           <th>Song Title</th>
@@ -35,7 +32,7 @@
           <tr>
             <td>{{ song.title }}</td>
             <td>{{ song.running_time }} mins</td>
-            <td><a href="/songs/{{ song.id }}" method="GET">View Song</a></td>
+            <td><a href="/songs/{{ song.id }}" method="GET"><u>View Song</u></a></td>
             <td>
               <form class="form-delete-btn" action="/songs/{{ song.id }}/delete" method="POST">
                 <input class="btn_delete" type="submit" value="Delete" />

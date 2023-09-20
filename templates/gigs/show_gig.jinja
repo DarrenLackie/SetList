@@ -8,8 +8,8 @@
   <h2>Add Songs to Setlist</h2>
   <br>
   {% for album, songs_in_album in songs|groupby('album') %}
-    <details>
-      <summary>{{ album }}</summary>
+    <details id="album-names">
+      <summary class="album-title-summary">{{ album }}</summary>
       {% for song in songs_in_album %}
         <div class="album-dropdown">
           <label>

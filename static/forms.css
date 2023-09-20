@@ -34,18 +34,6 @@
     margin-top: 5px;
 }
 
-/* .form-inline {
-    overflow: hidden;
-    grid-area: form
-  }
-    label {
-    float:right;
-    clear:both;
-    margin:10px
-  }
-  input {
-    float: right;
-    clear: both;
-    margin:10px;
-  }  */
-
+.form-inline {
+  margin-bottom:40px;
+}

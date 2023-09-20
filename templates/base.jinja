@@ -5,6 +5,7 @@
       <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='tables.css') }}">
+      <script src="https://kit.fontawesome.com/3921cbf444.js" crossorigin="anonymous"></script>
       <title>SetList</title>
   </head>
   <body>
@@ -22,17 +23,20 @@
               <li>
                 <a href="/songs">Songs</a>
               </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-user" style="color: #000000;"></i></a>
+              </li>
           </ul>
         </nav>
     </header>
     <main>
-      <section id="content">
+      <section class="content">
         {% block content %}
 
         {% endblock%}
       </section>
     </main>
-        {# <footer id="footer">
+        {# <footer class="footer">
           <p>&copy; 2020 SetList</p>
         </footer> #}
 </body>

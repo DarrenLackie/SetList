@@ -1,13 +1,14 @@
 .btn_delete {
-    background-color: #C33C54;
+    background-color: #9e0707;
+    color: whitesmoke
   }
   
   .btn_delete:hover {
-    background-color: #730000;
+    background-color: #d20808;
 }
 
 .btn_submit:hover {
-    background-color: #ABC798;
+    background-color: #add791;
 }
   
 .btn_submit {

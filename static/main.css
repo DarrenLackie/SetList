@@ -11,12 +11,7 @@ header {
     height: 130px;
     display: inline;
     align-items: center;
-
 }
-
-/* .header-bar {
-  display:flex;
-} */
 
 nav {
   display:flex;
@@ -35,26 +30,32 @@ header li {
 }
 
 body {
-    /* height: 125vh; */
     background-color:whitesmoke;
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 180px;
-    /* padding:50px */
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
-/* footer {
+.content {
+  margin-left: 8px;
+  margin-right: 8px;
+  text-align: center;
+}
+
+/* .footer {
     background-color: #ff857cfb;
     width:100%;
-    position: absolute;
-    bottom: 0
+    position: sticky;
+    bottom: 0;
 } */
 
 .band-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
-    margin-top: 30px;
+    justify-content:space-evenly;
+    margin-top: 50px;
   }
 
 .band {
@@ -68,73 +69,21 @@ body {
     text-align: center;
   }
 
-  .song-container {
-    display: flex;
-    flex-direction:column;
-    width: 40vw;
-    background-color: #ffb4af;
-    padding: 10px;
-    margin: 20px;
-    border: solid 2px black;
-    text-align: center;
-  }
-
-  .album-dropdown {
-    padding:12px
-  }
-
-  /* #grid-container {
-    display: grid;
-    grid-template-areas:
-      'header menu'
-      'form table'
-      'footer footer';
-    grid-template-columns: 3fr 7fr;
-  /* } */
-
-/* .skew-menu{
+.song-container {
   display: flex;
-  justify-content: flex-end;
-  margin:20px;
+  flex-direction:column;
+  width: 40vw;
+  background-color: #ffb4af;
+  padding: 10px;
+  margin: 20px;
+  border: solid 2px black;
+  text-align: center;
 }
 
-.skew-menu ul{
-  display:inline-block;
-  margin:0;
-  padding:10;
-  list-style:none;
-  transform:skew(-25deg);
+.album-title-summary {
+  padding:12px
 }
 
-.skew-menu ul li{
-  background:#ff857cd0;
-  float:left;
-  border-right:1px solid #ff857cfa;
-  box-shadow:0 1px 1px rgba(0,0,0,0.1);
-  text-transform:uppercase;
-  color:#555;
-  font-weight:bolder;
-  transition:all 0.3s linear;
-  
-  &:first-child {
-    border-radius:7px 0 0 7px;
-  }
-  
-  &:last-child{
-    border-right:none;
-    border-radius:0 7px 7px 0;
-  }
-  
-  &:hover{
-    background:#eee;
-    color: blue
-  }
-  
-  a{
-    display:block;
-    padding:1em 2em;
-    color:inherit;
-    text-decoration:none;
-    transform:skew(25deg);
-  }
-} */
+.album-dropdown {
+  padding:12px
+}
