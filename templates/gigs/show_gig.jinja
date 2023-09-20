@@ -9,6 +9,7 @@
   <br>
   <p>Set Time Remaining: {{ gig.set_time - total_running_time }} mins</p>
 </div>
+
 <div id="gig-list-of-songs">
   {% for album, songs_in_album in songs|groupby('album') %}
     <details id="album-names">
@@ -33,11 +34,12 @@
   <div class="song-box">
     <ul>
       <li>
-        {{ setlist.song.title }} ( <small><i>{{ setlist.song.album }}</i></small> ) [{{ setlist.song.running_time }}mins]<form action="/setlists/{{ setlist.id }}/delete" method="POST"><input class="btn delete" type="submit" value="-"/>
-        </form>
-       {# {{ total_song_times }} #}
+        {{ setlist.song.title }} ( <small><i>{{ setlist.song.album }}</i></small> ) [{{ setlist.song.running_time }}mins]
       </li>
-
+      <li>
+        <form action="/setlists/{{ setlist.id }}/delete" method="POST">
+        <input class="btn delete" type="submit" value=" - "/>
+        </form>
       </li>
     </ul>
   </div>   

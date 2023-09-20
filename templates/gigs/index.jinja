@@ -26,7 +26,7 @@
     <th></th>
     <th>Set Time</th>
   </tr>
-  {% for gig in gigs %}
+  {% for gig in gigs|sort(attribute='date') %}
   <tr>
     <td>{{gig.date}} </a></td>
     <td>|</td>
