@@ -13,8 +13,6 @@
 </form>
 
 <h1><u>Songs</u></h1>
-{# <details>
-<summary>These Four Walls</summary> #}
 {% for album, songs_in_album in songs|groupby('album') %}
   <details id="album-names">
     <summary>{{ album }}</summary>

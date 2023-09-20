@@ -1,6 +1,9 @@
 .btn_delete {
     background-color: #9e0707;
-    color: whitesmoke
+    color: whitesmoke;
+    height: 30;
+    width: 90;
+    font-size: 14px;
   }
   
 .btn_delete:hover {
@@ -13,6 +16,9 @@
   
 .btn_submit {
     background-color: #ABC798;
+    height: 30px;
+    width: 90px;
+    font-size: 14px;
 }
 
 .btn_submit_2:hover {
@@ -21,7 +27,18 @@
 
 .btn_submit_2 {
   background-color: #ABC798;
-  margin-left: 13px;
+  margin-left: 50px;
+  margin-top: 20px;
+  height: 30px;
+  width: 250px;
+  font-size: 22px;
+}
+
+.btn_delete_2 {
+  margin-top: 10px;
+  height: 25px;
+  width: 75px;
+  font-size: 18px;
 }
 
 .form-delete-btn {
@@ -30,4 +47,8 @@
 
 .no-way a:hover {
   cursor:not-allowed;
+}
+
+#gig-list-of-songs input[type="checkbox"] {
+  margin-left:23px
 }

@@ -35,3 +35,11 @@
 #album-names a:hover {
   color:#ff857cd0;
 }
+
+.band h2 {
+  margin-top:45px;
+}
+
+/* #no-way:hover {
+  cursor: not-allowed;
+} */
