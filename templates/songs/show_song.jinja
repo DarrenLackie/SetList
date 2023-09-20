@@ -1,15 +1,18 @@
 {% extends "base.jinja" %}
 
 {% block content %}
-<div class="song-container"
-<h2>{{ song.title }}</h2>
-<h4><i>{{ song.album }}</i></h4>
+<div class="song-container">
+<h2>{{ song.title }}</h2><br>
+<h4><i>{{ song.album }}</i></h4><br>
 <h4><i>{{ song.running_time }}mins</i></h4>
 <br><br>
 <h3><a href="#">View Lyrics</a></h3>
 <br><br>
 <form action="/songs/{{ song.id }}/update" method="get">
 <input class="btn_submit" type="submit" value="Update"></button>
+<br><br>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6LEJghhSrirAJwzpJ5Mzcv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
 
 
 

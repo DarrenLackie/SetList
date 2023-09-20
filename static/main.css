@@ -72,11 +72,14 @@ body {
 .song-container {
   display: flex;
   flex-direction:column;
-  width: 40vw;
+  width: 60vw;
   background-color: #ffb4af;
   padding: 10px;
   margin: 20px;
+  margin-left:auto;
+  margin-right:auto;
   border: solid 2px black;
+  font-size: 20px;
   text-align: center;
 }
 
