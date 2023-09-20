@@ -12,6 +12,10 @@
     color: black;
     margin-bottom: 50px;
   }
+
+  #show-gig-heading {
+    margin-bottom: 30px;
+  }
   
   a, a:link, a:visited {
     color: #000000;

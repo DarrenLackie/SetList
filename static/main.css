@@ -87,3 +87,29 @@ body {
 .album-dropdown {
   padding:12px
 }
+
+#gig-heading {
+  grid-area: gig-heading;
+  /* margin-bottom: 30px; */
+}
+
+#gig-list-of-songs {
+  grid-area: gig-list-of-songs;
+}
+
+#setlist-display {
+  margin-top:18px;
+  grid-area: setlist-display
+}
+
+#grid-container {
+  display: grid;
+  grid-template-areas:
+    'gig-heading gig-heading'
+    'gig-list-of-songs setlist-display';
+  grid-template-columns: 5fr 5fr;
+}
+
+li {
+  list-style: none;
+}

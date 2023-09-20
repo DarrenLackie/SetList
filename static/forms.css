@@ -16,9 +16,9 @@
 
 .form-inline input[type="submit"] {
     padding: 5px 10px 5px;
-    background-color: #1445b8bd;
+    background-color: #ff857cd0;
     border: 1px solid black;
-    color: white;
+    color: black;
     margin-left:10px;
   }
 

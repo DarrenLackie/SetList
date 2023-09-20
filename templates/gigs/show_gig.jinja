@@ -1,12 +1,15 @@
 {% extends "base.jinja" %}
 
 {% block content %}
-
-<h1>{{ gig.city }}, {{ gig.venue }}, {{ gig.date }}</h1>
-<hr>
+<div id="grid-container">
+<div id="gig-heading">
+<h1 id="show-gig-heading">{{ gig.city }}, {{ gig.venue }}, {{ gig.date }}</h1>
 <form action="/gigs/{{ gig.id }}/setlists/new" method="post">
   <h2>Add Songs to Setlist</h2>
   <br>
+  <p>Set Time Remaining: {{ gig.set_time - total_running_time }} mins</p>
+</div>
+<div id="gig-list-of-songs">
   {% for album, songs_in_album in songs|groupby('album') %}
     <details id="album-names">
       <summary class="album-title-summary">{{ album }}</summary>
@@ -22,23 +25,23 @@
   {% endfor %}
   <input class="btn_submit" type="submit" value="+">
 </form>
+</div>
 <hr>
-<p>Set Time Remaining: {{ gig.set_time - total_running_time }} mins</p>
+<div id="setlist-display">
 
 {% for setlist in gig.setlists %}
   <div class="song-box">
     <ul>
       <li>
-        {{ setlist.song.title }} ( <small><i>{{ setlist.song.album }}</i></small> ) [{{ setlist.song.running_time }}mins]
+        {{ setlist.song.title }} ( <small><i>{{ setlist.song.album }}</i></small> ) [{{ setlist.song.running_time }}mins]<form action="/setlists/{{ setlist.id }}/delete" method="POST"><input class="btn delete" type="submit" value="-"/>
+        </form>
        {# {{ total_song_times }} #}
       </li>
-      <li>
-        <form action="/setlists/{{ setlist.id }}/delete" method="POST">
-          <input class="btn delete" type="submit" value="delete" />
-        </form>
+
       </li>
     </ul>
   </div>   
 {% endfor %}
-
+</div>
+</div>
 {% endblock %}
