@@ -15,6 +15,19 @@
     background-color: #ABC798;
 }
 
+.btn_submit_2:hover {
+  background-color: #add791;
+}
+
+.btn_submit_2 {
+  background-color: #ABC798;
+  margin-left: 13px;
+}
+
 .form-delete-btn {
   margin:0px;
+}
+
+.no-way a:hover {
+  cursor:not-allowed;
 }

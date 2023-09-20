@@ -1,3 +1,19 @@
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem
+}
+
 header img {
   height:130px;
 }
@@ -32,6 +48,7 @@ header li {
 body {
     background-color:whitesmoke;
     color: black;
+    font-size:large;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 180px;
     margin-left: 0px;
@@ -43,13 +60,6 @@ body {
   margin-right: 8px;
   text-align: center;
 }
-
-/* .footer {
-    background-color: #ff857cfb;
-    width:100%;
-    position: sticky;
-    bottom: 0;
-} */
 
 .band-container {
     display: flex;
@@ -97,11 +107,15 @@ body {
 }
 
 #gig-list-of-songs {
+  text-align: left;
+  font-size: 24px;
+  margin-left: 300px;
   grid-area: gig-list-of-songs;
 }
 
 #setlist-display {
   margin-top:18px;
+  font-size: 24px;
   grid-area: setlist-display
 }
 
@@ -115,4 +129,21 @@ body {
 
 li {
   list-style: none;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer li {
+  list-style: none;
+  text-align: center;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.footer p {
+  text-align: center;
+  margin-left: 28px
 }

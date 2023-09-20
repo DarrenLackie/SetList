@@ -31,9 +31,7 @@
     color: whitesmoke;
     cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important;
   }
-  
-  
-  /* #content {
-    border-left: 1px solid #254E70;
-    padding-left: 25px;
-  } */
+
+#album-names a:hover {
+  color:#ff857cd0;
+}
