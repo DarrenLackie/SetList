@@ -9,12 +9,13 @@
     background-color: #ff857cd0;
     border: 1px solid black;
     color: black;
-    font-size: 14px ;
+    font-size: 14px;
     margin-left:10px;
   }
 
 .form-inline input[type="text"] {
-    width: 25%
+    width: 25%;
+    height: 30px;
 }
 
 .form [type="submit"] {
@@ -27,4 +28,12 @@
 
 .form-inline {
   margin-bottom:40px;
+}
+
+.form-inline input#set_time {
+  height: 30px;
+}
+
+.form-inline input#date {
+  height:30px
 }

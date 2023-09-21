@@ -5,8 +5,6 @@
 <div id="gig-heading">
 <h1 id="show-gig-heading">{{ gig.city }}, {{ gig.venue }}, {{ gig.date }}</h1>
 <form action="/gigs/{{ gig.id }}/setlists/new" method="post">
-  <h2>Add Songs to Setlist</h2>
-  <br>
   <h2>Set Time Remaining: {{ gig.set_time - total_running_time }} mins</h2>
 </div>
 

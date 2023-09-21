@@ -21,7 +21,11 @@ th {
   
 #songs-table {
     margin-left:auto;
-    margin-right:auto   
+    margin-right:auto;
+}
+
+#songs-table td {
+    border: 1px solid black; 
 }
 
 .gig-table {

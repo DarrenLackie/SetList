@@ -17,8 +17,9 @@
 .btn_submit {
     background-color: #ABC798;
     height: 30px;
-    width: 90px;
+    width: 95px;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .btn_submit_2:hover {
