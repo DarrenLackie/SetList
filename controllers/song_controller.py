@@ -3,7 +3,24 @@ from flask import Blueprint
 from models.song import Song
 from models.setlistitem import SetListItem
 from models.gig import Gig
+from services.song_services import update_song_obj
 from app import db
+
+
+# we can consider extracting out logic and extra verbosity from our controller functions, we care more about _what_ are code is doing as opposed to _how_ its doing it. 
+# see below for example
+# this has the following benefits ..
+
+# 1. Separation of concerns
+# One of the core principles of software engineering is the separation of concerns. By moving business logic out of controllers and into separate components, you ensure that each component has a single responsibility. Controllers should primarily handle user input and orchestrate the flow of data, while logic related to data manipulation, validation, and business rules should be handled by other parts of the application.
+# 2. Code Reusability (keeps us DRY)
+# Extracting logic into separate modules or classes makes it more reusable. You can use the same logic in multiple controllers or even in different parts of your application. This reduces code duplication and leads to a more maintainable codebase.
+# 3. Scalable 
+# As your application grows, you may need to change or extend its functionality, if we have to do the same action several times, it helps if we have the logic to do that action central to one place if we suddenly need to change how we are doing that action we now need to just change the code in one place as apposed to every place we where doing that action.
+# 4. Readability 
+# Controllers are typically responsible for managing the flow of requests and responses. When logic is mixed with controller code, it can make controllers bulky and less readable. Extracting logic into separate files/folders leads to cleaner, more focused, and more readable code. This improves the overall maintainability of the application. 
+
+
 
 songs_blueprint = Blueprint("songs", __name__)
 
@@ -56,3 +73,17 @@ def update_song(id):
 
     return redirect(f'/songs/{song_to_update.id}')
 
+ 
+##########################
+# example of extracting logic/verbosity
+##########################
+# @songs_blueprint.route("/songs/<id>/update", methods=["POST"])
+# def update_song(id):
+#     song_to_update = Song.query.get(id)
+#     update_song_obj(song_to_update, request.form)
+
+#     db.session.commit()
+
+#     return redirect(f'/songs/{song_to_update.id}')
+
+ 
